@@ -10322,6 +10322,7 @@ color: rgb(231, 15, 15);
   box-shadow: 0 10px 30px  #0d1b1b,
   0 -10px 30px #0d1b1b ;
   background: linear-gradient(to right ,#500f0f,#0d1b1b); 
+  /* height: fit-content; */
 }
 .work .procon{
   position: relative;
@@ -10465,5 +10466,9 @@ h4.title{
 }
 .card3{
   padding-top: 25px;
+}
+
+.hidden{
+  /* display: none; */
 }
 /* end .portfolio-b */
