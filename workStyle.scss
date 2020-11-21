@@ -1,0 +1,331 @@
+// mixin
+@mixin b {
+    border: 1px red solid;
+  }
+  
+  // variables
+  $ffamily: Verdana, Geneva, Tahoma, sans-serif;
+  
+  body {
+    font-family: $ffamily;
+    margin: 0;
+    padding: 0;
+  
+    box-sizing: border-box;
+    // background: url("../img/broken_noise_@2X.png");
+  
+  
+  }
+  
+.Mywork{
+      background: url("../img/broken_noise_@2X.png");
+
+}
+
+  input{
+      display: none;
+  }
+  .main {
+    padding: 80px 10px;
+  
+    h1 {
+      position: relative;
+      text-transform: capitalize;
+      font-family: "Lobster", cursive;
+      color: #c0392b;
+      font-weight: bold;
+      margin: 0 0 100px;
+      
+      
+  
+      &::before {
+        content: "";
+        width: 80px;
+        position: absolute;
+        height: 4px;
+        background-color: #c0392b;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+        animation: animate 4s linear infinite;
+      }
+    }
+    .nav {
+  
+          background-color: #e7695b;
+      color: #e4d8d8;
+      width: 75%;
+      margin: 0 auto 70px;
+      height: 70px;
+      border-bottom: 3px #2c3e50 solid;
+      border-top: 3px #2c3e50 solid;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      display: flex;
+      justify-content: space-between;
+  
+    
+      
+      @media (max-width:550px) , (max-width:767px){
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center; 
+  padding: 10px;
+  width: 55%;
+   }
+  // @media (min-width:755px) , (max-width:800px) {
+  //     height: fit-content;
+      
+  // }
+      span {
+              background-color: #2c3e50;
+              border-radius: 25px;
+              width: 230px;
+                    line-height: 60px;
+              height: 100%;
+              font-size: 30px;
+              font-weight: bold;
+              cursor: pointer;
+              font-family: "Lobster", cursive;
+              letter-spacing: 2px;
+              margin: -0.01px;
+  
+              &:hover {
+                  background-color: #533a3a;
+                  color: #dacbca;
+                  transition: 0.8s;
+                }
+                @media (max-width:767px){
+                  margin-bottom: 20px;
+        
+              }
+  
+  //             @media (min-width:755px)and (max-width:992px){
+  // display: block;
+  // width: 100%;
+  // border-radius: 0;
+  // border-top-left-radius: 25px;
+  // border-top-right-radius:25px ;
+  // margin-bottom: 14px;
+  
+  //             }
+        
+          }
+       
+  
+        
+  
+       
+      //   @media (min-width:768px) {
+      //       width: 100%;
+      //       border-radius: 0;
+      //       border-top-left-radius:25px ;
+      //       border-top-right-radius: 25px;
+      //       margin-bottom: 15px;
+  
+      //   }
+      }
+      label {
+  
+              cursor: pointer;
+        line-height: 63px;
+        width: 170px;
+        height: 100%;
+        border-radius: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border: 2px #2c3e50 solid;
+        background-color: #2d3436;
+        transition: 0.5s;
+        
+  
+        &:hover,
+        :focus {
+          transform: scale(0.9);
+          transition: 0.5s ease-in-out;
+        }
+        @media (max-width:550px) {
+          height: 50px;
+          border-radius: 17px;
+          line-height: 45px;
+      }
+  
+  
+      // @media (min-width:767px) {
+      //     margin: 7px;
+      //     height: 55px;
+      //     line-height: 50px;
+      // }
+      }
+    }
+  
+    .gellary {
+      margin-top: 50px;
+      // @include b;
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: (repeat(4, 1fr));
+      grid-gap: 15px;
+  
+      @media (min-width:768px) {
+          grid-template-columns: (repeat(3, 1fr));
+  
+      }
+      @media (max-width:767px) {
+          grid-template-columns: (repeat(2, 1fr));
+  
+      }
+      @media (max-width:550px) {
+          grid-template-columns:1fr;
+  
+      }
+    .pic {
+        position: relative;
+        height: 250px;
+        border-radius: 20px;
+        cursor: pointer;
+  
+  
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          left: 0;
+              background-color: rgba($color: #010102, $alpha: 0.6);
+          border-radius: 20px;
+          height: 0;
+          transition: .7s;
+        }
+        &:hover::after {
+          height: 100%;
+        }
+  
+        &::before{
+            content: 'click to view';
+            position: absolute;
+            top:40%;
+            left: 50%;
+            color: #ffffff;
+            font-size: 35px;
+            width: 100%;
+            height: 100%;
+         
+            transform: translate(-50%,-50%);
+            border-radius: 25px;
+            padding-top: 30%;
+            font-weight: bold;
+            font-family: "Lobster", cursive ;
+            letter-spacing: 3px;
+            margin-top: -90px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            transition: .7s;
+            transition-delay: .3s;
+        }
+  &:hover::before{
+      margin: 0;
+      opacity: 1;
+      visibility: visible;
+  }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+      
+        }
+      }
+  }
+  //fillter
+  //check 1..............
+  #check1:checked ~ .container-fluid .main .gellary .pic{
+      transform:scale(1);
+      opacity: 1;
+      position: relative;
+      transition:1s;
+  
+  }
+  #check2:checked ~ .container-fluid .main .target{
+      color: #866868;
+  }
+  #check3:checked ~ .container-fluid .main .target{
+      color: #238306;
+  }
+  #check4:checked ~ .container-fluid .main .target{
+      color: #660683;
+  }
+  
+  //check2...................
+  #check2:checked ~ .container-fluid .main .gellary  .ancient{
+      transform:scale(1);
+      opacity: 1;
+      position: relative;
+      transition:1s;
+  
+  }
+  #check2:checked ~ .container-fluid .main .gellary  .landscape,
+  #check2:checked ~ .container-fluid .main .gellary   .art
+  {
+      transform:scale(0);
+      opacity: 0;
+      position: absolute;
+  
+  }
+  
+  
+  // check3................
+  #check3:checked ~ .container-fluid .main .gellary   .art{
+      transform:scale(1);
+      opacity: 1;
+      position: relative;
+      transition:1s;
+  
+  }
+  #check3:checked ~ .container-fluid .main .gellary  .landscape,
+  #check3:checked ~ .container-fluid .main .gellary  .ancient
+  {
+      transform:scale(0);
+      opacity: 0;
+      position: absolute;
+  
+  }
+  
+  //check4
+  #check4:checked ~ .container-fluid .main .gellary  .landscape{
+      transform:scale(1);
+      opacity: 1;
+      position: relative;
+      transition:1s;
+  
+  }
+  #check4:checked ~ .container-fluid .main .gellary  .art,
+  #check4:checked ~ .container-fluid .main .gellary .ancient
+  {
+      transform:scale(0);
+      opacity: 0;
+      position: absolute;
+  
+  }
+  
+  
+  @keyframes animate {
+    0% {
+      width: 80px;
+    }
+    50% {
+      width: 200px;
+    }
+    100% {
+      width: 80px;
+    }
+  }
+  
+  
+  

@@ -10315,15 +10315,15 @@ color: rgb(231, 15, 15);
 /* end our skills  */
 
 
-/* start portfrolio  */
-.work{
+/* start portfrolio  .*/
+/* .work{
   padding-top:70px;
   padding-bottom:70px;
   box-shadow: 0 10px 30px  #0d1b1b,
   0 -10px 30px #0d1b1b ;
-  background: linear-gradient(to right ,#500f0f,#0d1b1b); 
+  background: linear-gradient(to right ,#500f0f,#0d1b1b);  */
   /* height: fit-content; */
-}
+/* }
 .work .procon{
   position: relative;
 
@@ -10336,7 +10336,7 @@ color: rgb(231, 15, 15);
     margin: auto;
   }
 }
-
+ */
 
 
 
@@ -10368,7 +10368,7 @@ ul.filters > li.active > a{
     background-color: #28bea8;
 } */
 
-.card{
+/* .card{
     position: relative;
     margin-bottom: 50px;
     color: #000;
@@ -10444,11 +10444,11 @@ h4.title{
     transition: .4s;
     border-radius: 10px;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: capitalize; */
     /* border-style: none; */
-    outline: none;
-}
-@media (max-width:991px) and (min-width:700px){
+    /* outline: none;
+} */
+/* @media (max-width:991px) and (min-width:700px){
   .card-btn{
     margin-bottom: -20px;
     
@@ -10470,5 +10470,17 @@ h4.title{
 
 .hidden{
   /* display: none; */
-}
+/* } */ 
 /* end .portfolio-b */
+
+
+
+
+
+
+
+
+/* start another container  */
+
+
+/* end another container  */

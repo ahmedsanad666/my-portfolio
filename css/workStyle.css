@@ -1,0 +1,328 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Mywork {
+  background: url("../img/broken_noise_@2X.png");
+}
+
+input {
+  display: none;
+}
+
+.main {
+  padding: 80px 10px;
+}
+
+.main h1 {
+  position: relative;
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+  color: #c0392b;
+  font-weight: bold;
+  margin: 0 0 100px;
+}
+
+.main h1::before {
+  content: "";
+  width: 80px;
+  position: absolute;
+  height: 4px;
+  background-color: #c0392b;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 2px;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+}
+
+.main .nav {
+  background-color: #e7695b;
+  color: #e4d8d8;
+  width: 75%;
+  margin: 0 auto 70px;
+  height: 70px;
+  border-bottom: 3px #2c3e50 solid;
+  border-top: 3px #2c3e50 solid;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 550px), (max-width: 767px) {
+  .main .nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+    width: 55%;
+  }
+}
+
+.main .nav span {
+  background-color: #2c3e50;
+  border-radius: 25px;
+  width: 230px;
+  line-height: 60px;
+  height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Lobster", cursive;
+  letter-spacing: 2px;
+  margin: -0.01px;
+}
+
+.main .nav span:hover {
+  background-color: #533a3a;
+  color: #dacbca;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+@media (max-width: 767px) {
+  .main .nav span {
+    margin-bottom: 20px;
+  }
+}
+
+.main label {
+  cursor: pointer;
+  line-height: 63px;
+  width: 170px;
+  height: 100%;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 2px #2c3e50 solid;
+  background-color: #2d3436;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main label:hover,
+.main label :focus {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 550px) {
+  .main label {
+    height: 50px;
+    border-radius: 17px;
+    line-height: 45px;
+  }
+}
+
+.gellary {
+  margin-top: 50px;
+  width: 90%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .gellary {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .gellary {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gellary {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.gellary .pic {
+  position: relative;
+  height: 250px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.gellary .pic::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: rgba(1, 1, 2, 0.6);
+  border-radius: 20px;
+  height: 0;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.gellary .pic:hover::after {
+  height: 100%;
+}
+
+.gellary .pic::before {
+  content: 'click to view';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  color: #ffffff;
+  font-size: 35px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 25px;
+  padding-top: 30%;
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+  letter-spacing: 3px;
+  margin-top: -90px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  -webkit-transition: .7s;
+  transition: .7s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.gellary .pic:hover::before {
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.gellary .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#check1:checked ~ .container-fluid .main .gellary .pic {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#check2:checked ~ .container-fluid .main .target {
+  color: #866868;
+}
+
+#check3:checked ~ .container-fluid .main .target {
+  color: #238306;
+}
+
+#check4:checked ~ .container-fluid .main .target {
+  color: #660683;
+}
+
+#check2:checked ~ .container-fluid .main .gellary .ancient {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#check2:checked ~ .container-fluid .main .gellary .landscape,
+#check2:checked ~ .container-fluid .main .gellary .art {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  position: absolute;
+}
+
+#check3:checked ~ .container-fluid .main .gellary .art {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#check3:checked ~ .container-fluid .main .gellary .landscape,
+#check3:checked ~ .container-fluid .main .gellary .ancient {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  position: absolute;
+}
+
+#check4:checked ~ .container-fluid .main .gellary .landscape {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#check4:checked ~ .container-fluid .main .gellary .art,
+#check4:checked ~ .container-fluid .main .gellary .ancient {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  position: absolute;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 80px;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    width: 80px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 80px;
+  }
+  50% {
+    width: 200px;
+  }
+  100% {
+    width: 80px;
+  }
+}
+/*# sourceMappingURL=workStyle.css.map */
